@@ -1,5 +1,7 @@
 #docker-compose.ymlのバージョン
 version: '3.8'
+volumes:
+  docker-volume:
 
 #webサーバー、アプリケーション、DBコンテナの設定
 services:
@@ -13,6 +15,8 @@ services:
       - .:/app
   app:
     build: ./docker/php
+    depends_on:
+      - db
     volumes:
       - .:/app
   db:
