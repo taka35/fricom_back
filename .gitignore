@@ -24,3 +24,9 @@ Homestead.yaml
 Homestead.json
 /.vagrant
 .phpunit.result.cache
+
+# Laravel 8 initial gitignore
+.env.backup
+docker-compose.override.yml
+/.idea
+/.vscode
