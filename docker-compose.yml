@@ -24,10 +24,10 @@ services:
     ports:
       - '3306:3306'
     environment:
-      MYSQL_DATABASE: fricom
-      MYSQL_USER: fricom
-      MYSQL_PASSWORD: password
-      MYSQL_ROOT_PASSWORD: root
-      TZ: 'Asia/Tokyo'
+      MYSQL_DATABASE: ${DB_DATABASE}
+      MYSQL_USER: ${DB_USERNAME}
+      MYSQL_PASSWORD: ${DB_PASSWORD}
+      MYSQL_ROOT_PASSWORD: ${DB_ROOT_PASSWORD}
+      TZ: ${DB_TZ}
     volumes:
       - docker-volume:/var/lib/mysql
